@@ -1,0 +1,108 @@
+@font-face {
+  font-family: Digital;
+  src: url(../../fonts/ds_digital/DS-DIGIB.TTF);
+}
+
+@mixin flex($align, $justify) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin innerDimensions($width) {
+  height: calc(#{$clockHeight} - #{$cuttingPoint});
+  width: $width;
+}
+
+$clockHeight: 20vmax;
+$clockWidth: 45vmax;
+$cuttingPoint: 30px;
+
+
+.mn {
+  height: 100vh;
+  width: 100%;
+  background-color: #151515;
+  @include flex(center, center);
+
+  .clock {
+    height: $clockHeight;
+    width: $clockWidth;
+    background-color: #222;
+    border-radius: 7px;
+    box-shadow: 0 0 10px rgba(27, 27, 27, 0.8);
+    @include flex(center, center);
+
+    .dis {
+      height: calc(#{$clockHeight} - #{$cuttingPoint});
+      width: calc(#{$clockWidth} - #{$cuttingPoint});
+      background-color: #151515;
+      border-radius: 5px;
+      @include flex(center, center);
+    }
+
+    .time{
+      border: 1px solid #222;
+    }
+
+    .day {
+      position: relative;
+      @include innerDimensions(20%);
+      @include flex(flex-start, center);
+      padding: 0 .7vmax;
+      gap: .5vmax;
+      flex-direction: column;
+    }
+
+    .day-name{
+      display: block;
+      font-family: Digital;
+      font-size: 1.5vmax;
+      color: #323232;
+      user-select: none;
+    }
+
+    .day-active{
+      color: #fefe
+    }
+    
+    .time {
+      @include innerDimensions(60%);
+      color: #fefe;
+      letter-spacing: 1vmax;
+      @include flex(center, center);
+    }
+    
+    .time-tellr{
+      font-family: Digital;
+      font-size: 10vmax;
+    }
+    
+    .mer{
+      @include innerDimensions(20%);
+      @include flex(center, center);
+      font-family: Digital;
+      color: #fefe;
+      font-size: 3vmax;
+    }
+
+    .blinker{
+      animation: blink 1s steps(1) infinite;
+    }
+
+    @keyframes blink {
+      0%{
+        opacity: 0;
+      }
+
+      50%{
+        opacity: 1;
+      }
+
+      100%{
+        opacity: 0;
+      }
+    }
+  }
+
+}
