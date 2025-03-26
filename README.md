@@ -1,12 +1,38 @@
-# React + Vite
+# Simple Digital Clock (React.js)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
+This is a simple **Digital Clock** built using **React.js**. It displays the current time and updates every second.
 
-Currently, two official plugins are available:
+## Features
+- Displays the current time in **HH:MM:SS AM/PM** format.
+- Updates automatically every second.
+- Lightweight and easy to integrate into any project.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Installation
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/MuhammadTalha15/React-Clock.git
+   ```
+2. Navigate to the project folder:
+   ```sh
+   cd React-Clock
+   ```
+3. Install dependencies:
+   ```sh
+   npm install
+   ```
+4. Start the development server:
+   ```sh
+   npm start
+   ```
+   or
+   ```sh
+   npm run dev
+   ```
 
-## Expanding the ESLint configuration
+## Usage
+Once the app is running, you will see the digital clock displayed on the screen. The time updates every second.
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+## License
+This project is licensed under the MIT License.
